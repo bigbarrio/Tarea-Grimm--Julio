@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de datos Wesen</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Archivo de estilos CSS -->
+</head>
+<body>
+    <img src="imagenes/2.jpg" onclick="location.reload();"alt="Imagen del título"class="centered-image">
+    <div class="container">
+        <div class="wesen-list">
+            <div id="wesenListContainer" class="wesen-list-container"></div>
+        </div>
+        <div class="wesen-details">
+            <label class="label label-colored" for="nombre">Nombre:</label>
+            <input type="text" id="nombre" class="form-input" required><br>
+        
+            <label class="label label-colored" for="imagen">Imagen:</label>
+            <input type="file" id="imagenInput" class="form-input" required onchange="previewImage(event)">
+            <img id="imagen" src="" alt="Imagen del Wesen" class="form-input" required><br>
+
+            <label class="label label-colored" for="tipo">Tipo:</label>
+            <select id="tipo" class="form-input" required>
+            <option value="" disabled selected>Selecciona un tipo</option>
+            <option value="lobo">Lobo</option>
+            <option value="chacal">Chacal</option>
+            <option value="felino">Felino</option>
+            <option value="alienigena">Alienigena</option>
+            <option value="vampiro">Vampiro</option>
+            <option value="zorro">Zorro</option>
+            <option value="tortuga">Tortuga</option>
+            <option value="aligator">Vampiro</option>
+            <option value="cocodrilo">Cocodrilo</option>
+            <option value="perro">Perro</option>
+            </select><br>
+        
+            <label class="label label-colored" for="peligrosidad">Peligrosidad:</label>
+            <select id="peligrosidad" class="form-input" required>
+            <option value="" disabled selected>Selecciona una peligrosidad</option>
+            <option value="pacifico">Pacifico</option>
+            <option value="neutral">Neutral</option>
+            <option value="peligroso">Peligroso</option>
+            <option value="violento">Violento</option>
+            <!-- Agrega más opciones según tus necesidades -->
+            </select><br>
+        
+            <label class="label label-colored" for="descripcion">Descripción:</label>
+            <textarea id="descripcion" class="form-input" required></textarea><br>
+        
+            <label class="label label-colored" for="notas">Notas:</label>
+            <textarea id="notas" class="form-input"></textarea><br>
+        
+            <!-- Botón para agregar un nuevo Wesen (dentro del formulario) -->
+            <div class="tooltip">
+            <button id="addWesenButton"  class="button">Nuevo Wesen</button>
+            <span class="tooltiptext">Presione este botón para comenzar a crear un nuevo Wesen</span>
+            </div>
+            <div class="tooltip">
+            <button type="button" id="saveWesenButton" class="button">Guardar</button>
+            <span class="tooltiptext">Presione este botón para guardar los cambios</span>
+            </div>
+            <div class="tooltip">
+            <button type="button" id="deleteWesenButton" class="button">Eliminar</button>
+            <span class="tooltiptext">Presione este botón para eliminar un Wesen seleccionado</span>
+            </div>
+        </div>
+    <script src="script.js"></script> <!-- Archivo de JavaScript -->
+</body>
+</html>
